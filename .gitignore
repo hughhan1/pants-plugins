@@ -1,0 +1,25 @@
+# MacOS
+*.DS_Store
+
+# Text Editors / IDEs
+.idea/
+.vscode/
+*.swp
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+
+# Python
+.python-version
+*__pycache__/
+
+# Pants
+/.pants.d/
+/dist/
+/.pids
+/.pants.workdir.file_lock*
+/.pants.rc
+
+# Miscellaneous
+*.tmp

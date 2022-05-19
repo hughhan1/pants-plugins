@@ -1,0 +1,30 @@
+[GLOBAL]
+pants_version = "2.11.0"
+pythonpath = ["%(buildroot)s/"]
+
+backend_packages = [
+  "pants.backend.plugin_development",
+  "pants.backend.python",
+  "pants.backend.experimental.python.lint.autoflake",
+  "pants.backend.python.lint.black",
+  "pants.backend.python.lint.isort",
+  "pants.backend.python.typecheck.mypy",
+  "pants.core",
+]
+
+[anonymous-telemetry]
+enabled = false
+
+[autoflake]
+args = [
+  "--in-place",
+  "--remove-all-unused-imports",
+]
+
+[python]
+enable_resolves = true
+interpreter_constraints = ["CPython==3.9.*"]
+lockfile_generator = "pex"
+
+[python.resolves]
+python-default = "3rdparty/python/default.lock"
